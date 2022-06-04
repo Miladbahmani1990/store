@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar=()=>{
     return(
@@ -11,20 +12,20 @@ const Sidebar=()=>{
 
         <div style={{ textAlign: "right" }}>
           <h2>
-            <a href="/product">محصولات</a>
-          </h2>
+            <Link to="/product">محصولات</Link>
+       </h2>
 
           <h2>
-            <a href="/">کاربران</a>
-          </h2>
+            <Link to="/users">کاربران</Link>
+       </h2>
 
           <h2>
-            <a href="/">سوال و جواب</a>
-          </h2>
+            <Link to="/question">سوال و جواب</Link>
+       </h2>
           
           <h2>
-            <a href="/">گالری</a>
-          </h2>
+            <Link to="/">گالری</Link>
+       </h2>
 
         </div>
       </div>

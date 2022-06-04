@@ -1,9 +1,14 @@
+td {
+ text-align: center;
+ font-size: larger;
+ border:1px solid gray;
+}
 
-/* .backgrounds{
-    background: fixed;
-    background-image: url("./pic/background.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    width: 100%;
-    height: 100%;
-} */
+
+table {
+    border: 2px gray solid;
+    border-collapse: collapse;
+    direction: rtl;
+    width:100%
+}
+
