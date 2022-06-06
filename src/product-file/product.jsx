@@ -15,7 +15,6 @@ const Products=()=>{
             <h1 style={{textAlign:"center"}}>محصولات mini-store</h1>
             <div dir="rtl">
               <input type="text" placeholder='جست و جو' value={Save1} onChange={(e)=>setSave1(e.target.value)} style={{height:"25px" , width:"200px" , marginBottom:"10px"}} />
-              <button style={{height:"30px" , width:"50px" , marginBottom:"10px" , marginRight:"5px"}} >select</button>
             </div>
             <table>
                 <tbody>

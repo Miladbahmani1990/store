@@ -23,6 +23,17 @@ const handleSearch=(e)=>{
   setSaveuser(Search1.filter(u=>u.name.includes(text.substring(0, 1).toUpperCase())))
 }
 
+const handleDelete=(itemId)=>{
+    axios.delete(`https://jsonplaceholder.typicode.com/users/${itemId}`).then(res=>{
+    if(res.status==200){
+      setSaveuser(saveUser.filter(p=>p.id!=itemId))
+    alert("ok")
+    }else{
+      alert("error")
+    }
+    })
+}
+
   return (
     <div style={{marginTop:"50px"}}>
       <h1 style={{textAlign:"center"}}>صفحه ی محصولات</h1>
@@ -49,8 +60,8 @@ const handleSearch=(e)=>{
             <td>{u.username} </td>
             <td>{u.email}</td>
             <td>
-              <MdOutlineEdit style={{cursor:"pointer" , marginLeft:"15px" ,color:"green"}}/>
-              <ImBin style={{cursor:"pointer" , color:"red"}}/>
+              <MdOutlineEdit style={{cursor:"pointer" , marginLeft:"15px" ,color:"green"}} onClick={()=>navigate(`/users/edit/${u.id}`)} />
+              <ImBin style={{cursor:"pointer" , color:"red"}} onClick={()=>handleDelete(u.id)}/>
             </td>
             
             {/* <td>{u.}</td> */}
